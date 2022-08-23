@@ -1,0 +1,37 @@
+.benefits {
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__header {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--headings-text-color-default);
+    }
+
+    &__item {
+        width: 270px;
+    }
+
+    &__conntainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        height: 120px;
+        background-color: var(--benefits-icons-background-color);
+        border-radius: 4px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+        color: var(--text-p-color-default);
+    }
+}

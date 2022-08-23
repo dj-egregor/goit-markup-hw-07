@@ -1,0 +1,42 @@
+.page-header {
+    border-bottom: 1px solid var(--header-border-color);
+
+    &__additional-nav {
+        display: flex;
+        margin-left: auto;
+    }
+    &__item {
+        margin-left: 50px;
+        position: relative;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: var(--text-p-color-default);
+        transition-property: color;
+        transition-duration: var(--time-to-animate);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__icon {
+        fill: currentColor;
+        margin-right: 10px;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--links-text-color-hover);
+    }
+}

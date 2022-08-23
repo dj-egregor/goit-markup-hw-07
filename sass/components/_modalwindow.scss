@@ -1,0 +1,47 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition-property: visibility, opacity;
+    transition: opacity var(--time-to-animate) cubic-bezier(0.4, 0, 0.2, 1), visibility var(--time-to-animate) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 40px;
+    width: 528px;
+    height: 581px;
+    background-color: var(--body-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--time-to-animate) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--headings-text-color-default);
+    margin-bottom: 12px;
+}
